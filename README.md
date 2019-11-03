@@ -24,6 +24,13 @@ npm install
 ionic generate page home
 ionic generate page index
 ```
+
+### generate
+
+- generate everything inside /apple folder
+
+`cd apple`
+
 - Generate Unauthenticated Pages
 
 ```
@@ -41,3 +48,31 @@ ionic generate page pages/notifications
 ionic generate page pages/settings
 
 ```
+
+ionic generate component components/slides
+
+ionic generate component components/start-button
+
+
+## Building a Mobile Application
+You have to create a production build for generating mobile applications.
+
+### Production Build
+$ ionic build --prod
+
+### Build iOS App
+Following commands for executing Xcode build, watch the video tutorial you will understand more.
+$ ionic capacitor add ios
+$ ionic capacitor open ios
+
+### Build Android App
+Open Android build using Android SDK
+$ ionic capacitor add android
+$ ionic capacitor open andriod
+
+
+### Project Updates
+If you want to update your project changes.
+$ ionic capacitor copy ios
+$ ionic capacitor copy ios
+

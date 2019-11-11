@@ -2,7 +2,9 @@
 
 https://www.9lessons.info/2019/08/ionic-5-angular-8-welcome-page.html
 
-## Setup project
+## Setup and Develop the Project
+
+### Part1: Startup and Configure
 
  - `npm install -g ionic`
 
@@ -53,7 +55,7 @@ ionic generate component components/slides
 
 ionic generate component components/start-button
 
-# ionic-loginsignup Part 2: Login, Auth and Signup
+### ionic-loginsignup Part 2: Login, Auth and Signup
 
 https://www.9lessons.info/2019/09/ionic-5-and-angular-8-restful-api-user.html
 
@@ -62,9 +64,17 @@ ionic generate service services/http
 ionic generate service services/storage
 
 ionic generate service services/auth
+
 ionic generate service services/toast
 
-- Error: Cannot find module '@capacitor/core'
+ionic generate guard guards/home
+
+ionic generate guard guards/index
+
+
+### Problems:
+
+#### Error: Cannot find module '@capacitor/core'
 
 npm install --save @capacitor/core @capacitor/cli
 

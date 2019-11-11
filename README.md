@@ -61,6 +61,8 @@ ionic generate service services/http
 
 ionic generate service services/storage
 
+ionic generate service services/auth
+
 - Error: Cannot find module '@capacitor/core'
 
 npm install --save @capacitor/core @capacitor/cli

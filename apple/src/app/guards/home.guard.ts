@@ -16,11 +16,14 @@ export class HomeGuard implements CanActivate {
           if (res) {
             resolve(true);
           } else {
+            console.log('HomeGuard, no AUTH');
             this.router.navigate(['login']);
             resolve(false);
           }
         })
         .catch(err => {
+          console.log('HomeGuard, get err');
+          this.router.navigate(['login']); // Fixing /home/feed showing empty if no key
           resolve(false);
         });
     });

@@ -62,6 +62,7 @@ ionic generate service services/http
 ionic generate service services/storage
 
 ionic generate service services/auth
+ionic generate service services/toast
 
 - Error: Cannot find module '@capacitor/core'
 

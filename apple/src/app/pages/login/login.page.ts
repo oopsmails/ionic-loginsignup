@@ -21,7 +21,10 @@ export class LoginPage implements OnInit {
     private authService: AuthService,
     private storageService: StorageService,
     private toastService: ToastService
-  ) { }
+  ) {
+    this.postData.username = 'albert';
+    this.postData.password = 'albert';
+  }
 
   ngOnInit() { }
 
@@ -38,10 +41,15 @@ export class LoginPage implements OnInit {
   }
 
   loginAction() {
+    console.log(this.postData);
     if (this.validateInputs()) {
       this.authService.login(this.postData).subscribe(
         (res: any) => {
           if (res.userData) {
+            // v1:
+            // this.storageService.store(AuthConstants.AUTH, res.userData);
+            // this.router.navigate(['home']);
+
             // Storing the User data.
             this.storageService
               .store(AuthConstants.AUTH, res.userData)

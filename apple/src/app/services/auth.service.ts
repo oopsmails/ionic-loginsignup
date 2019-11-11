@@ -32,11 +32,11 @@ export class AuthService {
   }
 
   logout() {
-    this.storageService.clear();
+    // this.storageService.clear();
 
-    // this.storageService.removeStorageItem(AuthConstants.AUTH).then(res => {
-    //   this.router.navigate(['']);
-    // });
+    this.storageService.removeStorageItem(AuthConstants.AUTH).then(res => {
+      this.router.navigate(['']);
+    });
 
     this.userData$.next('');
     this.router.navigate(['']);

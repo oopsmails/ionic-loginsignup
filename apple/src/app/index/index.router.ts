@@ -1,11 +1,13 @@
 import { RouterModule, Routes } from '@angular/router';
 import { IndexPage } from './index.page';
 import { NgModule } from '@angular/core';
+import { IndexGuard } from '../guards/index.guard';
 
 const routes: Routes = [
     {
         path: '',
         component: IndexPage,
+        canActivate: [IndexGuard],
         children: [
             {
                 path: '',

@@ -19,7 +19,11 @@ export class StorageService {
   // Get the value
   async get(storageKey: string) {
     const ret = await Storage.get({ key: storageKey });
-    return JSON.parse(unescape(atob(ret.value)));
+    console.log(ret);
+    if (ret) {
+      return JSON.parse(unescape(atob(ret.value)));
+    }
+    return '';
   }
 
   async removeStorageItem(storageKey: string) {

@@ -15,10 +15,11 @@ export class AuthService {
     private httpService: HttpService,
     private storageService: StorageService,
     private router: Router
-  ) {}
+  ) { }
 
   getUserData() {
     this.storageService.get(AuthConstants.AUTH).then(res => {
+      console.log(res);
       this.userData$.next(res);
     });
   }
@@ -33,12 +34,11 @@ export class AuthService {
 
   logout() {
     // this.storageService.clear();
-
     this.storageService.removeStorageItem(AuthConstants.AUTH).then(res => {
+      // this.router.navigate(['']);
+      this.userData$.next('');
       this.router.navigate(['']);
     });
 
-    this.userData$.next('');
-    this.router.navigate(['']);
   }
 }

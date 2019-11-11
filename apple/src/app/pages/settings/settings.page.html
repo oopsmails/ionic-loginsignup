@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>settings</ion-title>
+    <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-button color='apple' (click)="logoutAction()">Log Out</ion-button>
+  <ion-item>
+    token: {{ authUser?.token }}
+  </ion-item>
 </ion-content>

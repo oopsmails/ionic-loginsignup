@@ -1,4 +1,4 @@
-# ionic-loginsignup, 
+# ionic-loginsignup Part 1: Setup and Routing 
 
 https://www.9lessons.info/2019/08/ionic-5-angular-8-welcome-page.html
 
@@ -53,8 +53,20 @@ ionic generate component components/slides
 
 ionic generate component components/start-button
 
+# ionic-loginsignup Part 2: Login, Auth and Signup
 
-## Building a Mobile Application
+https://www.9lessons.info/2019/09/ionic-5-and-angular-8-restful-api-user.html
+
+ionic generate service services/http
+
+ionic generate service services/storage
+
+- Error: Cannot find module '@capacitor/core'
+
+npm install --save @capacitor/core @capacitor/cli
+
+
+# Building a Mobile Application
 You have to create a production build for generating mobile applications.
 
 ### Production Build

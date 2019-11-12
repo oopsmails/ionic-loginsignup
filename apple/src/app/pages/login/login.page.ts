@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
   }
 
   loginAction() {
-    console.log(this.postData);
+    // console.log(this.postData);
     if (this.validateInputs()) {
       this.authService.login(this.postData).subscribe(
         (res: any) => {

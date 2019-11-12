@@ -33,12 +33,20 @@ export class AuthService {
   }
 
   logout() {
-    // this.storageService.clear();
-    this.storageService.removeStorageItem(AuthConstants.AUTH).then(res => {
-      // this.router.navigate(['']);
-      this.userData$.next('');
-      this.router.navigate(['']);
-    });
+    // // this.storageService.clear();
+    // this.storageService.removeStorageItem(AuthConstants.AUTH).then(res => {
+    //   // this.router.navigate(['']);
+    //   this.userData$.next('');
+    //   this.router.navigate(['']);
+    // });
 
+    this.storageService.clear();
+    this.userData$.next('');
+
+    // if (this.userData$) {
+    //   this.userData$.unsubscribe();
+    // }
+
+    this.router.navigate(['']);
   }
 }

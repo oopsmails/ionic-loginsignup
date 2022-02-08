@@ -24,3 +24,12 @@ hs_err_pid*
 
 node_modules/
 .DS_Store
+
+.history
+.node_modules/
+node_modules
+www
+android
+ios
+
+

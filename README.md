@@ -79,6 +79,40 @@ ionic generate guard guards/index
 npm install --save @capacitor/core @capacitor/cli
 
 
+#### Error: Storage set not defined ...
+
+```
+in storage.service.ts, following is not supported anymore.
+
+import { Plugins } from '@capacitor/core';
+
+use following to import new
+
+npm install --save @capacitor/storage
+
+import { Storage } from '@capacitor/storage';
+
+```
+
+#### Warn: escape and unescape deparated
+
+- use following encodeURIComponent and decodeURIComponent
+
+```
+const encryptedValue = btoa(encodeURIComponent(JSON.stringify(value)));
+
+return JSON.parse(decodeURIComponent(atob(ret.value)));
+
+```
+
+- interesting explaination, but still use 
+
+https://stackoverflow.com/questions/30631927/converting-to-base64-in-javascript-without-deprecated-escape-call
+
+
+
+
+
 # Building a Mobile Application
 You have to create a production build for generating mobile applications.
 

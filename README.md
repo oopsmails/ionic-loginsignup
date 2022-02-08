@@ -2,6 +2,21 @@
 
 https://www.9lessons.info/2019/08/ionic-5-angular-8-welcome-page.html
 
+
+## Quick Run
+
+- server.js, if in environment, set mock = false
+
+"start": "ng serve & node ./server/server.js",
+
+there is a server.js, which is as mock backend ...
+
+
+- in environment, set mock = true, in order to test on REAL Physical Phone!
+
+Further, in order to build --prod and test on phone, default set mock as true.
+
+
 ## Setup and Develop the Project
 
 ### Part1: Startup and Configure
@@ -117,21 +132,89 @@ https://stackoverflow.com/questions/30631927/converting-to-base64-in-javascript-
 You have to create a production build for generating mobile applications.
 
 ### Production Build
-$ ionic build --prod
+ionic build --prod
+
+
+#### Error: css-loader error: Invalid version: "15.2-15.3"
+
+- https://github.com/angular/angular-cli/issues/22606
+
+```
+npx browserslist
+
+error from following: 
+safari 15.2-15.3
+
+```
+
+- change *.browserslistrc* file at root level, final like following,
+
+```
+last 1 Chrome version
+last 1 Firefox version
+last 2 Edge major versions
+last 2 Safari major versions
+last 2 iOS major versions
+Firefox ESR
+not IE 11 # Angular supports IE 11 only as an opt-in. To opt-in, remove the 'not' prefix on this line.
+not dead
+# not IE 9-11
+# not ios_saf 15.2-15.3
+not safari 15.2-15.3
+
+```
+
+
+```
+
+ionic build --prod
+
+ionic capacitor add android
+npx cap sync
+
+npx cap copy
+npx cap open android
+
+albert@albert-mint20:~/Documents/dev/ionic/ionic-loginsignup/apple$ npx cap open android
+[error] Unable to launch Android Studio. Is it installed?
+        Attempted to open Android Studio at: /usr/local/android-studio/bin/studio.sh
+        You can configure this with the CAPACITOR_ANDROID_STUDIO_PATH environment variable.
+```
+- Fixed by NOT opening Android Studio!!!! <----------------------------- the apk can be installed and run on phsical phone now.
+
+
+```
+ionic capacitor add android 
+
+ionic capacitor copy android && cd android && ./gradlew assembleDebug && cd ..
+
+Then your apk will be at:
+
+android/app/build/outputs/apk/debug/app-debug.apk
+If you want to run on device directly from command line:
+
+```
+
+## Deparated Below!
+
 
 ### Build iOS App
 Following commands for executing Xcode build, watch the video tutorial you will understand more.
-$ ionic capacitor add ios
-$ ionic capacitor open ios
+```
+ionic capacitor add ios
+ionic capacitor open ios
+```
 
 ### Build Android App
 Open Android build using Android SDK
-$ ionic capacitor add android
-$ ionic capacitor open andriod
-
+```
+ionic capacitor add android
+ionic capacitor open andriod
+```
 
 ### Project Updates
 If you want to update your project changes.
-$ ionic capacitor copy ios
-$ ionic capacitor copy ios
-
+```
+ionic capacitor copy ios
+ionic capacitor copy android
+```

@@ -4,6 +4,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthConstants } from './../config/auth-constants';
 import { HttpService } from './http.service';
 import { StorageService } from './storage.service';
+import { environment } from '../../environments/environment';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

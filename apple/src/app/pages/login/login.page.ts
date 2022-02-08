@@ -46,6 +46,8 @@ export class LoginPage implements OnInit {
       this.authService.login(this.postData).subscribe(
         (res: any) => {
           if (res.userData) {
+            console.log('res: ' + JSON.stringify(res));
+
             // v1:
             // this.storageService.store(AuthConstants.AUTH, res.userData);
             // this.router.navigate(['home']);

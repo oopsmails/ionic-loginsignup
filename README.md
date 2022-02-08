@@ -2,6 +2,21 @@
 
 https://www.9lessons.info/2019/08/ionic-5-angular-8-welcome-page.html
 
+
+## Quick Run
+
+- server.js, if in environment, set mock = false
+
+"start": "ng serve & node ./server/server.js",
+
+there is a server.js, which is as mock backend ...
+
+
+- in environment, set mock = true, in order to test on REAL Physical Phone!
+
+Further, in order to build --prod and test on phone, default set mock as true.
+
+
 ## Setup and Develop the Project
 
 ### Part1: Startup and Configure

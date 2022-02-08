@@ -17,7 +17,8 @@
     "ios-open": "ionic capacitor open ios",
     "android-open": "ionic capacitor open android",
     "ios-copy": "ionic capacitor copy ios",
-    "android-copy": "ionic capacitor copy android"
+    "android-copy": "ionic capacitor copy android",
+    "build-apk": "ionic build --prod && ionic capacitor add android && ionic capacitor copy android && cd android && ./gradlew assembleDebug && cd .."
   },
   "private": true,
   "dependencies": {

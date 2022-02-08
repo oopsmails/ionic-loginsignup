@@ -150,6 +150,39 @@ not safari 15.2-15.3
 ```
 
 
+```
+
+ionic build --prod
+
+ionic capacitor add android
+npx cap sync
+
+npx cap copy
+npx cap open android
+
+albert@albert-mint20:~/Documents/dev/ionic/ionic-loginsignup/apple$ npx cap open android
+[error] Unable to launch Android Studio. Is it installed?
+        Attempted to open Android Studio at: /usr/local/android-studio/bin/studio.sh
+        You can configure this with the CAPACITOR_ANDROID_STUDIO_PATH environment variable.
+```
+- Fixed by NOT opening Android Studio!!!! <----------------------------- the apk can be installed and run on phsical phone now.
+
+
+```
+ionic capacitor add android 
+
+ionic capacitor copy android && cd android && ./gradlew assembleDebug && cd ..
+
+Then your apk will be at:
+
+android/app/build/outputs/apk/debug/app-debug.apk
+If you want to run on device directly from command line:
+
+```
+
+## Deparated Below!
+
+
 ### Build iOS App
 Following commands for executing Xcode build, watch the video tutorial you will understand more.
 ```

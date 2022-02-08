@@ -117,21 +117,56 @@ https://stackoverflow.com/questions/30631927/converting-to-base64-in-javascript-
 You have to create a production build for generating mobile applications.
 
 ### Production Build
-$ ionic build --prod
+ionic build --prod
+
+
+#### Error: css-loader error: Invalid version: "15.2-15.3"
+
+- https://github.com/angular/angular-cli/issues/22606
+
+```
+npx browserslist
+
+error from following: 
+safari 15.2-15.3
+
+```
+
+- change *.browserslistrc* file at root level, final like following,
+
+```
+last 1 Chrome version
+last 1 Firefox version
+last 2 Edge major versions
+last 2 Safari major versions
+last 2 iOS major versions
+Firefox ESR
+not IE 11 # Angular supports IE 11 only as an opt-in. To opt-in, remove the 'not' prefix on this line.
+not dead
+# not IE 9-11
+# not ios_saf 15.2-15.3
+not safari 15.2-15.3
+
+```
+
 
 ### Build iOS App
 Following commands for executing Xcode build, watch the video tutorial you will understand more.
-$ ionic capacitor add ios
-$ ionic capacitor open ios
+```
+ionic capacitor add ios
+ionic capacitor open ios
+```
 
 ### Build Android App
 Open Android build using Android SDK
-$ ionic capacitor add android
-$ ionic capacitor open andriod
-
+```
+ionic capacitor add android
+ionic capacitor open andriod
+```
 
 ### Project Updates
 If you want to update your project changes.
-$ ionic capacitor copy ios
-$ ionic capacitor copy ios
-
+```
+ionic capacitor copy ios
+ionic capacitor copy android
+```

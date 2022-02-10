@@ -205,6 +205,36 @@ ionic capacitor add ios
 ionic capacitor open ios
 ```
 
+```
+- On macOS
+
+npm install -g ionic
+
+ionic build --prod
+
+albert@Alberts-iMac apple % ionic capacitor add ios
+> capacitor add ios
+[error] Could not find the ios platform.
+        You must install it in your project first, e.g. w/ npm install @capacitor/ios
+
+npm install @capacitor/ios
+
+[error] CocoaPods is not installed.
+
+sudo gem uninstall cocoapods && sudo gem install cocoapods
+
+ionic capacitor open ios
+
+- error: springboard quit unexpectedly
+
+cd "C:\Program Files\Oracle\VirtualBox\"
+VBoxManage setextradata "MacOS" VBoxInternal/CPUM/IsaExts/AVX 0
+VBoxManage setextradata "MacOS" VBoxInternal/CPUM/IsaExts/AVX2 0
+
+
+```
+
+
 ### Build Android App
 Open Android build using Android SDK
 ```

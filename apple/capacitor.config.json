@@ -1,1 +1,7 @@
-{}
+{
+    "appId": "com.oopsmails.ionic.angular.apple",
+    "appName": "apple",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "www"
+  }

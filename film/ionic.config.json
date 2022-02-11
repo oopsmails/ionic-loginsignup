@@ -1,5 +1,10 @@
 {
+  "appId": "com.oopsmails.ionic.angular.film",
+  "appName": "film",
   "name": "film",
   "integrations": {},
-  "type": "angular"
+  "type": "angular",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
 }

@@ -6,12 +6,19 @@ https://ionicacademy.com/ionic-routing-navigation/?utm_source=convertkit&utm_med
 
 ## Start Project
 
+```
 npm install -g ionic
 
 ionic info
 
 ionic start film blank --type=angular
 
+ionic g page pages/tabs
+ionic g page pages/people
+ionic g page pages/planets
+ionic g page pages/films
+ionic g page pages/filmDetails
 
+```
 
 

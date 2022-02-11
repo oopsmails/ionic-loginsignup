@@ -179,6 +179,14 @@ albert@albert-mint20:~/Documents/dev/ionic/ionic-loginsignup/apple$ npx cap open
 [error] Unable to launch Android Studio. Is it installed?
         Attempted to open Android Studio at: /usr/local/android-studio/bin/studio.sh
         You can configure this with the CAPACITOR_ANDROID_STUDIO_PATH environment variable.
+
+- This is a permission issue, but couldn't figure it out, :(
+
+export CAPACITOR_ANDROID_STUDIO_PATH=/home/albert/Documents/programs/android-studio
+
+sudo chmod -R 777 /Applications/Android\ Studio\ 3.0\ Preview.app/Contents/gradle
+chmod 755 platforms/android/gradlew
+
 ```
 - Fixed by NOT opening Android Studio!!!! <----------------------------- the apk can be installed and run on phsical phone now.
 
@@ -248,3 +256,11 @@ If you want to update your project changes.
 ionic capacitor copy ios
 ionic capacitor copy android
 ```
+
+## Other
+
+### If Android Studio, Device Manager is not opening
+
+Go to Project Structure, most likely, there is no SDK configured!
+
+

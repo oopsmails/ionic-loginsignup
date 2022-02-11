@@ -25,6 +25,7 @@ hs_err_pid*
 node_modules/
 .DS_Store
 
+.idea
 .history
 .node_modules/
 node_modules

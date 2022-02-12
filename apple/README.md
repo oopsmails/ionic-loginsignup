@@ -203,7 +203,7 @@ If you want to run on device directly from command line:
 
 ```
 
-## Deparated Below!
+## Deparated Below!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 ### Build iOS App

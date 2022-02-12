@@ -2,7 +2,9 @@
   "appId": "com.oopsmails.ionic.angular.film",
   "appName": "film",
   "name": "film",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular",
   "bundledWebRuntime": false,
   "npmClient": "npm",

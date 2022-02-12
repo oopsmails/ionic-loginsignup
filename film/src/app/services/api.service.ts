@@ -15,4 +15,16 @@ export class ApiService {
   getFilm(id) {
     return this.http.get(`https://swapi.dev/api/films/${id}`);
   }
+
+  getPeoples() {
+    return this.http.get('https://swapi.dev/api/people');
+  }
+
+  getPeople(id) {
+    return this.http.get(`https://swapi.dev/api/people/${id}`);
+  }
+
+  getPlanets() {
+    return this.http.get('https://swapi.dev/api/planets');
+  }
 }

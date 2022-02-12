@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-people',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeoplePage implements OnInit {
 
-  constructor() { }
+  peoples: Observable<any>;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.peoples = this.apiService.getPeoples();
   }
 
+  openDetails(people) {
+    alert('need details page!');
+  }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-films',
@@ -9,16 +11,25 @@ import { Router } from '@angular/router';
 })
 export class FilmsPage implements OnInit {
 
-  constructor(private navController: NavController, private router: Router) { }
+  films: Observable<any>;
+
+  constructor(private navController: NavController, 
+    private router: Router,
+    private apiService: ApiService
+    ) { }
 
   ngOnInit() {
+    this.films = this.apiService.getFilms();
   }
 
-  openDetails() {
+  openDetails(film) {
     // Both of these would work!
     // But the standard Router is recommended.
-    // this.navController.navigateForward(`/tabs/films/42`);
-    this.router.navigateByUrl(`/tabs/films/42`);
+    // this.navController.navigateForward(`/tabs/films/42`); // v1
+    // this.router.navigateByUrl(`/tabs/films/42`); // v2
+    let split = film.url.split('/');
+    let filmId = split[split.length-2];
+    this.router.navigateByUrl(`/tabs/films/${filmId}`);
   }
 
   goToPlanets() {

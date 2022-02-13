@@ -28,9 +28,81 @@ Fixed by: ionic capacitor sync android
 - apk location
 /home/albert/Documents/dev/ionic/ionic-loginsignup/film/android/app/build/outputs/apk/debug
 
+- install on phone
+
+My Note: Copy the apk and install. If cannot install, one reason could be appId, defined in *capacitor.config.json*. Another reason, might uninstll old version, sometimes, need restart the phone!
+
 ## Build iOS
 
-- xcode 
+ionic build --prod
+
+npm i @ionic/cli???
+
+
+### Error: css-loader error: Invalid version: "15.2-15.3"
+
+- https://github.com/angular/angular-cli/issues/22606
+
+```
+npx browserslist
+
+error from following: 
+safari 15.2-15.3
+
+```
+
+- change *.browserslistrc* file at root level, final like following,
+
+```
+last 1 Chrome version
+last 1 Firefox version
+last 2 Edge major versions
+last 2 Safari major versions
+last 2 iOS major versions
+Firefox ESR
+not IE 11 # Angular supports IE 11 only as an opt-in. To opt-in, remove the 'not' prefix on this line.
+not dead
+# not IE 9-11
+# not ios_saf 15.2-15.3
+not safari 15.2-15.3
+
+```
+
+Following commands for executing Xcode build, watch the video tutorial you will understand more.
+```
+ionic capacitor add ios
+ionic capacitor open ios <--------------- this will open xcode
+```
+
+
+### Other Errors On macOS
+
+```
+npm install -g ionic
+
+ionic build --prod
+
+albert@Alberts-iMac apple % ionic capacitor add ios
+> capacitor add ios
+[error] Could not find the ios platform.
+        You must install it in your project first, e.g. w/ npm install @capacitor/ios
+
+npm install @capacitor/ios
+
+[error] CocoaPods is not installed.
+
+sudo gem uninstall cocoapods && sudo gem install cocoapods
+
+ionic capacitor open ios
+
+- error: springboard quit unexpectedly
+
+cd "C:\Program Files\Oracle\VirtualBox\"
+VBoxManage setextradata "MacOS" VBoxInternal/CPUM/IsaExts/AVX 0
+VBoxManage setextradata "MacOS" VBoxInternal/CPUM/IsaExts/AVX2 0
+
+```
+
 ### cocoapods
 
 - This is the simplest

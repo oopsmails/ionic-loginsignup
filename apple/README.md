@@ -135,35 +135,6 @@ You have to create a production build for generating mobile applications.
 ionic build --prod
 
 
-#### Error: css-loader error: Invalid version: "15.2-15.3"
-
-- https://github.com/angular/angular-cli/issues/22606
-
-```
-npx browserslist
-
-error from following: 
-safari 15.2-15.3
-
-```
-
-- change *.browserslistrc* file at root level, final like following,
-
-```
-last 1 Chrome version
-last 1 Firefox version
-last 2 Edge major versions
-last 2 Safari major versions
-last 2 iOS major versions
-Firefox ESR
-not IE 11 # Angular supports IE 11 only as an opt-in. To opt-in, remove the 'not' prefix on this line.
-not dead
-# not IE 9-11
-# not ios_saf 15.2-15.3
-not safari 15.2-15.3
-
-```
-
 
 ```
 

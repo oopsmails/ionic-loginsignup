@@ -71,7 +71,7 @@ not safari 15.2-15.3
 Following commands for executing Xcode build, watch the video tutorial you will understand more.
 ```
 ionic capacitor add ios
-ionic capacitor open ios <--------------- this will open xcode
+ionic capacitor open ios <--------------- this will open xcode and then we can click *run*
 ```
 
 
@@ -145,7 +145,21 @@ pod install
 
 
 ## Debug ionic app in xcode
+- Ref:
 
+https://ionicframework.com/docs/troubleshooting/debugging
+
+iOS and Safari​
+
+Safari can be used to debug an Ionic app on a connected iOS device or iOS simulator.
+
+First, on the iOS device, enable Web Inspector from Settings > Safari > Advanced. ???? may be diff from devices and emulator
+
+Next, open Safari on a Mac then enable Show Develop menu in menu bar under Safari > Preferences > Advanced.
+
+Run the iOS simulator or connect your iOS device to your Mac, then run the Ionic app that you want to debug.
+
+Within Safari, select Develop in the toolbar. In the dropdown menu options, you should see the name of your device and app. Hover over the app name and click on localhost. This will open a new window with the Safari Developer Tools - use them to inspect and debug the Ionic app running on your device.
 
 To Be Dev
 

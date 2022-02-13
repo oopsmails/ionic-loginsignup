@@ -263,6 +263,17 @@ ionic capacitor copy android
 
 Go to Project Structure, most likely, there is no SDK configured!
 
+- if still cannot open Device Manager
+
+I still have the same problem with the Bumblebee version, but for now you can use the "Search Everywhere"(you can access "Search Everywhere" by pressing double shift) and type in "Virtual Device Manager" then it will works. This is a temporary solution for now.
+
+- Android Studio, android studio android app no module
+
+First of all, use AS to open *android* folder, e.g, /home/albert/Documents/dev/ionic/ionic-loginsignup/apple/android
+Second, make sure, file *build.gradle* is in root folder
+If still not showing, then, File, Sync Project with Gradle Files ...
+Now, the app should be able to be run on Emulator.
+
 ### cocoapods
 
 - This is the simplest

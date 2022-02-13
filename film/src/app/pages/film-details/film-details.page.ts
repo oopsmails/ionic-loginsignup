@@ -17,6 +17,7 @@ export class FilmDetailsPage implements OnInit {
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
+    console.log('id=' + id);
     this.apiService.getFilm(id).subscribe(res => {
       this.film = res;
     });

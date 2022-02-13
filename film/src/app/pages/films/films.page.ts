@@ -25,15 +25,16 @@ export class FilmsPage implements OnInit {
   openDetails(film) {
     // Both of these would work!
     // But the standard Router is recommended.
-    // this.navController.navigateForward(`/tabs/films/42`); // v1
-    // this.router.navigateByUrl(`/tabs/films/42`); // v2
+    // this.navController.navigateForward(`/tabs/films/3`); // v1
+    // this.router.navigateByUrl(`/tabs/films/3`); // v2
     let split = film.url.split('/');
     let filmId = split[split.length-2];
     this.openDetailsById(filmId);
   }
   
   openDetailsById(filmId) {
-    this.router.navigateByUrl(`/tabs/films/${filmId}`);
+    console.log('filmId=' + filmId);
+    this.router.navigateByUrl('/tabs/films/' + filmId);
   }
 
   goToPlanets() {

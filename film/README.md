@@ -22,3 +22,5 @@ ionic g page pages/filmDetails
 ```
 
 
+
+

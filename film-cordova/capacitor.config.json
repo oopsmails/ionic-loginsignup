@@ -1,0 +1,7 @@
+{
+    "appId": "com.oopsmails.ionic.angular.film-cordova",
+    "appName": "film cordova",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "www"
+  }

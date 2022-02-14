@@ -1,0 +1,7 @@
+{
+  "name": "film-cordova",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

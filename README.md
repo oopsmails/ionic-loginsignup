@@ -3,6 +3,14 @@
 ## Apple
 ## Film
 
+https://ionicacademy.com/getting-started-with-ionic-4/?utm_source=convertkit&utm_medium=email&utm_campaign=%5BIONIC-COURSE%5D+Day+1%3A+Getting+Started%20-%201568935
+
+https://ionicacademy.com/ionic-routing-navigation/?utm_source=convertkit&utm_medium=email&utm_campaign=%5BIONIC-COURSE%5D+Day+2%3A+Routing%20-%201568936
+
+https://ionicacademy.com/ionic-http-calls/?utm_source=convertkit&utm_medium=email&utm_campaign=%5BIONIC-COURSE%5D+Day+3%3A+Making+HTTP+Calls%20-%201568937
+
+
+https://ionicacademy.com/ionic-native-cordova/?utm_source=convertkit&utm_medium=email&utm_campaign=%5BIONIC-COURSE%5D+Day+4%3A+Native+Device+Features%20-%201568938
 
 ## Build Android
 

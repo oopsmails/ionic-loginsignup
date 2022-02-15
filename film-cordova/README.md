@@ -96,30 +96,3 @@ npm i @ionic-native/splash-screen
 npm i @ionic-native/status-bar
 
 
-- Temp
-
-```
-
-<ion-button expand="full" (click)="shareFilm()">Share by Email</ion-button>
-
-import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
-
-private emailComposer: EmailComposer
-
-shareFilm() {
-    let email = {
-      to: 'oopsmails@gmail.com',
-      subject: 'I love this one: ' + this.film.title ? this.film.title : ' mock title',
-      body: 'Can you remember the opening?<br><br>\"' + this.film.opening_crawl + '\"',
-      isHtml: true
-    };
-
-    console.log(email);
- 
-    // this.emailComposer.open(email);
-  }
-
-
-
-```
-

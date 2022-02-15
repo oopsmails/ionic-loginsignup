@@ -34,3 +34,64 @@ adb install platforms/android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
 This will install the App on your device and you got your first Ionic app in your hands!
+
+## Real build
+
+ionic cordova platform add android
+
+- Error: Source path does not exist: resources/android/icon/drawable-hdpi-icon.png
+
+npm i -g cordova-res
+
+ionic cordova resources android
+
+ionic cordova platform add android
+
+- Error: Source path does not exist: resources/android/xml/network_security_config.xml
+
+```
+Examine the resources folder if the xml folder exists in /android, if it doesn't just create it like..
+
+resources/
+    android/
+        xml/
+           network_security_config.xml
+Enter the following inside the file
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+<domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">localhost</domain>
+</domain-config>
+</network-security-config>
+```
+
+delete platforms/android
+
+and re-run 
+
+ionic cordova platform add android
+
+ionic cordova build android --verbose
+
+- Error:
+
+```
+* What went wrong:
+A problem occurred evaluating script.
+> No installed build tools found. Install the Android build tools version 30.0.3 or higher.
+```
+
+
+Go to Android Studio, Tool, SDK Manager, SDK Tools Tab, check "Show Package Details", install 30.0.3 and 31.0.0 ...
+
+Finally, have to use Android Studio .... 20220214
+
+- Error: alert('email native client is NOT available!!!');
+
+20220214: stopped here on Android Emulator, maybe try on real device later. But, at least, native API method call is OK, e.g, 
+
+```
+this.emailComposer.hasClient().then((available: boolean) => {
+```
+

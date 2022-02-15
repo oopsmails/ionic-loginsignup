@@ -33,3 +33,31 @@ At the top left next to the run button you now see the name of your project and 
 If you want to deploy your app to your iPhone, you can connect it through USB and it will appear at the top of that list above the simulators.
 
 Congratulations, you’ve now started, built and run your Ionic app on a native iOS device!
+
+
+ionic cordova build ios
+
+
+- Error: Source path does not exist: resources/ios/icon/icon-1024.png
+
+npm i -g cordova-res
+
+ionic cordova resources ios
+
+ionic cordova build ios --verbose
+
+- Error: Source path does not exist: resources/ios/icon/icon-small.png
+
+ionic cordova resources -f
+
+ionic cordova build ios --verbose
+
+
+The current version of ionic resources function does not generate all versions, but some icons still exist in config.xml file from old commands.
+
+You can remove all *<icon and <splash* from config.xml (backup file first) then
+ionic cordova resources -f
+the command will recreate icons and update config.xml with currently used icon/splash paths.
+
+
+

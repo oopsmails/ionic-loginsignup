@@ -1,3 +1,4 @@
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
@@ -12,7 +13,8 @@ export class FilmDetailsPage implements OnInit {
   film: any;
 
   constructor(private activatedRoute: ActivatedRoute,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private emailComposer: EmailComposer
   ) { }
 
   ngOnInit() {
@@ -23,4 +25,16 @@ export class FilmDetailsPage implements OnInit {
     });
   }
 
+  shareFilm() {
+    let email = {
+      to: 'oopsmails@gmail.com',
+      subject: 'I love this one: ' + this.film.title ? this.film.title : ' mock title',
+      body: 'Can you remember the opening?<br><br>\"' + this.film.opening_crawl + '\"',
+      isHtml: true
+    };
+
+    console.log(email);
+    this.emailComposer.open(email);
+    console.log('After this.emailComposer.open ......');
+  }
 }

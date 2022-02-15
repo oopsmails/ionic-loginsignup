@@ -26,15 +26,24 @@ export class FilmDetailsPage implements OnInit {
   }
 
   shareFilm() {
-    let email = {
-      to: 'oopsmails@gmail.com',
-      subject: 'I love this one: ' + this.film.title ? this.film.title : ' mock title',
-      body: 'Can you remember the opening?<br><br>\"' + this.film.opening_crawl + '\"',
-      isHtml: true
-    };
 
-    console.log(email);
-    this.emailComposer.open(email);
-    console.log('After this.emailComposer.open ......');
+    this.emailComposer.hasClient().then((available: boolean) => {
+      if (available) {
+        let email = {
+          to: 'oopsmails@gmail.com',
+          subject: 'I love this one: ' + this.film.title ? this.film.title : ' mock title',
+          body: 'Can you remember the opening?<br><br>\"' + this.film.opening_crawl + '\"',
+          isHtml: true
+        };
+
+        console.log(email);
+        this.emailComposer.open(email);
+        console.log('After this.emailComposer.open ......');
+      } else {
+        console.log('email native client is NOT available!!!');
+        alert('email native client is NOT available!!!');
+      }
+    });
+
   }
 }

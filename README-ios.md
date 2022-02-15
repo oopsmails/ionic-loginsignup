@@ -59,5 +59,42 @@ You can remove all *<icon and <splash* from config.xml (backup file first) then
 ionic cordova resources -f
 the command will recreate icons and update config.xml with currently used icon/splash paths.
 
+- Error in *ionic lib*: core.mjs:6484 ERROR TypeError: Cannot read properties of undefined (reading 'then')
+
+Need to run in Emulator, undefined is from browser has no native plugins.
+
+- Error: EmailComposer.getPlugin().getClients() is not a function.
+
+ionic cordova plugin add cordova-plugin-email-composer
+
+- Error: 4 duplicate symbols for architecture x86_64
+
+This is because conflicts between *"cordova-plugin-email"* and *"cordova-plugin-email-composer"*!
+
+*"cordova-plugin-email-composer"* should be used.
+
+cordova plugin remove cordova-plugin-email --save
+
+delete platform/ios
+
+ionic cordova platform add ios
+
+ionic cordova build ios --verbose
+
+Then, re-run in xcode.
+
+- Error: alert('email native client is NOT available!!!');
+
+20220214: stopped here on iOS Emulator, maybe try on real device later. But, at least, native API method call is OK, e.g, 
+
+```
+this.emailComposer.hasClient().then((available: boolean) => {
+```
+
+- After each change
+
+ionic cordova build ios and re-run in xcode.
+
+
 
 

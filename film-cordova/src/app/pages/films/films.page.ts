@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
+import { Capacitor } from '@capacitor/core';
 
 @Component({
   selector: 'app-films',
@@ -20,6 +21,8 @@ export class FilmsPage implements OnInit {
 
   ngOnInit() {
     this.films = this.apiService.getFilms();
+    console.log('Capacitor.isNativePlatform = ' + Capacitor.isNativePlatform);
+    console.log('Capacitor.getPlatform() = ' + Capacitor.getPlatform());
   }
 
   openDetails(film) {
